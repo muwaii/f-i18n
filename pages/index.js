@@ -16,7 +16,7 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Home() {
-  const { t, i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
   const router = useRouter();
   const { locale } = router;
 
