@@ -20,26 +20,6 @@ export default function Home() {
   const router = useRouter();
   const { locale } = router;
 
-  // useEffect(() => {
-  //   handleChangeLanguage(locale, locale !== i18n.language ? true : false);
-  // }, []);
-
-  // const handleChangeLanguage = (lng, isReload) => {
-  //   i18n.changeLanguage(lng);
-  //   handleRoute(i18n.language);
-  // };
-
-  // const handleRoute = (locale) => {
-  //   router.push(`${locale}${router.asPath}`, `${locale}${router.asPath}`, {
-  //     locale: false,
-  //   });
-  // };
-
-
-
-  console.log('before:', locale);
-
-
   function changeLang(lang) {
     router.push({
       pathname: `${lang}`  
@@ -49,8 +29,6 @@ export default function Home() {
   useEffect(() => {
     changeLang(locale);
   }, []);
-
-  console.log('after:', locale);
   
   return (
     <div className={styles.container}>
