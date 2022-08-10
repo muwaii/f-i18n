@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from 'next-i18next';
 import { useRouter } from "next/router";
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 export async function getStaticProps({ locale }) {
   return {
